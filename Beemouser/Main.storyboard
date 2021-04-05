@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
@@ -764,20 +764,63 @@
             <objects>
                 <viewController title="General" id="SS4-Wz-hAH" customClass="GeneralPreferencesController" sceneMemberID="viewController">
                     <view key="view" id="6SN-ZX-5XT">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="316" height="126"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ssu-2b-NMb">
-                                <rect key="frame" x="18" y="20" width="109" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Recording since: " id="omm-Gx-w4A">
+                                <rect key="frame" x="49" y="20" width="105" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Recording since:" id="omm-Gx-w4A">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhZ-jS-kbJ">
-                                <rect key="frame" x="131" y="20" width="23" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" placeholderString="n/a" id="Wqj-hk-UGg">
+                            <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fx9-N9-V3p">
+                                <rect key="frame" x="166" y="86" width="97" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="jaR-jH-tZD">
+                                    <font key="font" metaFont="system"/>
+                                    <date key="date" timeIntervalSinceReferenceDate="-63114077971.13179">
+                                        <!--0000-12-31 23:40:28 +0000-->
+                                    </date>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
+                                </datePickerCell>
+                            </datePicker>
+                            <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nhQ-ay-35H">
+                                <rect key="frame" x="166" y="51" width="97" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="c8X-ij-1oI">
+                                    <font key="font" metaFont="system"/>
+                                    <date key="date" timeIntervalSinceReferenceDate="-63113991631.223709">
+                                        <!--0001-01-01 23:39:28 +0000-->
+                                    </date>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
+                                </datePickerCell>
+                            </datePicker>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="W2j-dl-TiK">
+                                <rect key="frame" x="71" y="90" width="83" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Record from:" id="Evs-sw-oZt">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZfO-Mf-9Ev">
+                                <rect key="frame" x="73" y="55" width="81" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Record until:" id="Srf-M7-gLp">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhZ-jS-kbJ">
+                                <rect key="frame" x="164" y="20" width="134" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" placeholderString="n/a" usesSingleLineMode="YES" id="Wqj-hk-UGg">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -785,9 +828,12 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="ssu-2b-NMb" firstAttribute="leading" secondItem="6SN-ZX-5XT" secondAttribute="leading" constant="20" symbolic="YES" id="6Hh-Sr-keI"/>
-                            <constraint firstItem="OhZ-jS-kbJ" firstAttribute="leading" secondItem="ssu-2b-NMb" secondAttribute="trailing" constant="8" symbolic="YES" id="Nhv-5t-8SX"/>
-                            <constraint firstAttribute="bottom" secondItem="ssu-2b-NMb" secondAttribute="bottom" constant="20" symbolic="YES" id="yeN-5S-78u"/>
+                            <constraint firstItem="ssu-2b-NMb" firstAttribute="top" secondItem="ZfO-Mf-9Ev" secondAttribute="bottom" constant="19" id="1Nh-4s-Cuv"/>
+                            <constraint firstItem="ZfO-Mf-9Ev" firstAttribute="leading" secondItem="6SN-ZX-5XT" secondAttribute="leading" constant="75" id="Guk-wE-ZfL"/>
+                            <constraint firstItem="ZfO-Mf-9Ev" firstAttribute="top" secondItem="W2j-dl-TiK" secondAttribute="bottom" constant="19" id="ZJQ-kf-Jbr"/>
+                            <constraint firstItem="W2j-dl-TiK" firstAttribute="top" secondItem="6SN-ZX-5XT" secondAttribute="top" constant="20" symbolic="YES" id="ZsT-Bb-6je"/>
+                            <constraint firstItem="W2j-dl-TiK" firstAttribute="leading" secondItem="6SN-ZX-5XT" secondAttribute="leading" constant="73" id="qis-I2-6JM"/>
+                            <constraint firstItem="ssu-2b-NMb" firstAttribute="leading" secondItem="6SN-ZX-5XT" secondAttribute="leading" constant="51" id="xnd-f6-2pv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -796,7 +842,7 @@
                 </viewController>
                 <customObject id="VqU-lS-E1S" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676" y="1076"/>
+            <point key="canvasLocation" x="609" y="989"/>
         </scene>
         <!--Commitment-->
         <scene sceneID="rRM-pc-5K1">
@@ -809,7 +855,7 @@
                 </viewController>
                 <customObject id="QZf-Ug-UaW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="1076"/>
+            <point key="canvasLocation" x="1077" y="1076"/>
         </scene>
     </scenes>
 </document>

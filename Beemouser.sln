@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beemouser", "Beemouser\Beem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyConsoleProject", "DummyConsoleProject\DummyConsoleProject.csproj", "{D96ED28C-6476-4F43-886E-8657033829FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beemouser.Persistance", "Beemouser.Persistance\Beemouser.Persistance.csproj", "{6400143B-9A52-49C9-993B-A58086009812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beemouser.Domain", "Beemouser.Domain\Beemouser.Domain.csproj", "{CE9029CE-19EB-4E07-BA1F-1C2A8810DDC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D96ED28C-6476-4F43-886E-8657033829FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D96ED28C-6476-4F43-886E-8657033829FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D96ED28C-6476-4F43-886E-8657033829FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6400143B-9A52-49C9-993B-A58086009812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6400143B-9A52-49C9-993B-A58086009812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6400143B-9A52-49C9-993B-A58086009812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6400143B-9A52-49C9-993B-A58086009812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE9029CE-19EB-4E07-BA1F-1C2A8810DDC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE9029CE-19EB-4E07-BA1F-1C2A8810DDC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE9029CE-19EB-4E07-BA1F-1C2A8810DDC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE9029CE-19EB-4E07-BA1F-1C2A8810DDC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

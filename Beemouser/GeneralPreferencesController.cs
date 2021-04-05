@@ -10,6 +10,7 @@ using System.Linq;
 
 using Beemouser.Domain.Models;
 using Beemouser.DbContexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace Beemouser
 {
@@ -19,22 +20,31 @@ namespace Beemouser
 		{
 		}
 
-		private void UpdateRecordingSinceLabel()
+		public override void ViewDidLoad()
 		{
-			using (var context = new ClickContext())
-            {
-
-				RecordingSinceLabel.StringValue = GetFirstDataPoint().ToString();
-            }
+			base.ViewDidLoad();
+			
+			UpdateRecordingSinceLabel();
 		}
 
-		private DateTime GetFirstDataPoint()
+		private void UpdateRecordingSinceLabel()
+		{
+			var firstClick = GetFirstClickTime();
+
+			if (firstClick != null)
+            {
+                // Todo: Localize.
+                RecordingSinceLabel.StringValue = GetFirstClickTime()?.ToString("g");
+			}
+		}
+
+		private DateTime? GetFirstClickTime()
         {
 			using (var context = new ClickContext())
             {
-				var firstClick = context.Clicks.FirstOrDefault();
+				var firstClick = context.Clicks.FirstOrDefault()?.ClickedAt;
 
-				return firstClick.ClickedAt;
+				return firstClick;
             }
         }
 	}

@@ -24,23 +24,7 @@ namespace Beemouser
         {
             base.ViewDidLoad();
 
-            // Do any additional setup after loading the view.
-            NSEvent.AddGlobalMonitorForEventsMatchingMask(NSEventMask.LeftMouseDown, (NSEvent theEvent) =>
-            {
-                Console.WriteLine(theEvent);
-                var windowNumber = theEvent.WindowNumber;
-
-                var now = DateTime.UtcNow;
-
-                using (var _context = new ClickContext())
-                {
-                    _context.Add(new Click
-                    {
-                        ClickedAt = DateTime.UtcNow,
-                        WindowOwnerName = getWindow(windowNumber) ?? "unknown"
-                    });
-                }
-            });
+            
         }
 
         public override NSObject RepresentedObject
@@ -54,13 +38,6 @@ namespace Beemouser
                 base.RepresentedObject = value;
                 // Update the view, if already loaded.
             }
-        }
-
-        private string getWindow(nint windowNumber)
-        {
-            var service = new WindowInfoService();
-
-            return service.GetWindowOwnerName(windowNumber);
         }
     }
 }

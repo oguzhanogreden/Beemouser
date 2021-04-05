@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using SQLite;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -19,13 +18,13 @@ namespace Beemouser.DbContexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            Console.WriteLine(GetDbPath());
             optionsBuilder.UseSqlite($"Filename={GetDbPath()}");
         }
 
         private string GetDbPath()
         {
-            // todo: replace with app folder
-            var documents = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            var documents = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
             string dbPath = Path.Combine(documents, "ClickDatabase.db3");
 

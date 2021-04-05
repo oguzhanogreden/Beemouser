@@ -165,11 +165,10 @@
     <ImageAsset Include="Assets.xcassets\Contents.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DbContexts" />
     <Folder Include="Resources\" />
     <Folder Include="QuartzCoreHelpers\" />
     <Folder Include="QuartzCoreHelpers\Extensions\" />
-    <Folder Include="DbContexts\" />
-    <Folder Include="Domain.Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -188,7 +187,6 @@
     <Compile Include="QuartzCoreHelpers\Extensions\EmptyClass.cs" />
     <Compile Include="SQLiteAsync.cs" />
     <Compile Include="SQLite.cs" />
-    <Compile Include="DbContexts\ClickContext.cs" />
     <Compile Include="GeneralPreferencesController.cs" />
     <Compile Include="GeneralPreferencesController.designer.cs">
       <DependentUpon>GeneralPreferencesController.cs</DependentUpon>
@@ -197,10 +195,19 @@
     <Compile Include="CommitmentPreferencesController.designer.cs">
       <DependentUpon>CommitmentPreferencesController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Domain.Models\ClickData.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Beemouser.Domain\Beemouser.Domain.csproj">
+      <Project>{ce9029ce-19eb-4e07-ba1f-1c2a8810ddc5}</Project>
+      <Name>Beemouser.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Beemouser.Persistance\Beemouser.Persistance.csproj">
+      <Project>{6400143b-9a52-49c9-993b-a58086009812}</Project>
+      <Name>Beemouser.Persistance</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="\Library\Frameworks\Mono.framework\External\xbuild\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>

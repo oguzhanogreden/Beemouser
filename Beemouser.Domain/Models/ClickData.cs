@@ -13,10 +13,9 @@ namespace Beemouser.Domain.Models
             ClickedAt = DateTime.UtcNow;
         }
 
-        public Click(string windowOwnerName, DateTime clickedAt, int clicks)
+        public Click(string windowOwnerName)
         {
             WindowOwnerName = windowOwnerName;
-            ClickedAt = clickedAt;
             ClickedAt = DateTime.UtcNow;
         }
     }

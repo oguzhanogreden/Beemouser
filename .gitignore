@@ -406,3 +406,5 @@ ASALocalRun/
 
 .idea
 .vs
+
+*.db3
