@@ -709,7 +709,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -736,7 +736,7 @@
         <!--Tab View Controller-->
         <scene sceneID="8Om-v8-4Wa">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" id="Cuk-dm-gbW" sceneMemberID="viewController">
+                <tabViewController storyboardIdentifier="PreferencesController" selectedTabViewItemIndex="0" id="Cuk-dm-gbW" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" id="EtH-fz-zET"/>
                         <tabViewItem identifier="" id="5rm-az-wgJ"/>
